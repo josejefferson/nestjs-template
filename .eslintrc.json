@@ -1,0 +1,161 @@
+{
+  "extends": ["eslint:recommended", "prettier", "plugin:@typescript-eslint/recommended-type-checked"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": { "project": true },
+  "plugins": ["@typescript-eslint"],
+  "ignorePatterns": ["dist", "public", "temp", "*.js"],
+  "settings": { "react": { "version": "detect" } },
+  "rules": {
+    /*
+      ╔═╗╔═╗╦  ╦╔╗╔╔╦╗
+      ║╣ ╚═╗║  ║║║║ ║ 
+      ╚═╝╚═╝╩═╝╩╝╚╝ ╩ 
+    */
+
+    // Enforce return statements in callbacks of array methods
+    "array-callback-return": "warn",
+
+    // Enforce the use of variables within the scope they are defined
+    "block-scoped-var": "warn",
+
+    // Enforce camelcase naming convention
+    "camelcase": ["warn", { "properties": "never" }],
+
+    // Enforce dot notation whenever possible
+    "dot-notation": "warn",
+
+    // Require the use of === and !==
+    "eqeqeq": "warn",
+
+    // Require function names to match the name of the variable or property to which they are assigned
+    "func-name-matching": "warn",
+
+    // Require or disallow logical assignment operator shorthand
+    "logical-assignment-operators": "warn",
+
+    // Require constructor names to begin with a capital letter
+    "new-cap": ["warn", { "capIsNew": false }],
+
+    // Disallow the use of console
+    "no-console": ["warn", { "allow": ["warn", "error", "clear"] }],
+
+    // Disallow empty character classes in regular expressions
+    "no-empty": ["warn", { "allowEmptyCatch": true }],
+
+    // Disallow the use of eval()
+    "no-eval": "error",
+
+    // Disallow unnecessary calls to .bind()
+    "no-extra-bind": "warn",
+
+    // Disallow the use of eval()-like methods
+    "no-implied-eval": "error",
+
+    // Disallow variable or function declarations in nested blocks
+    "no-inner-declarations": "off",
+
+    // Disallow if statements as the only statement in else blocks
+    "no-lonely-if": "warn",
+
+    // Disallow comparisons where both sides are exactly the same
+    "no-self-compare": "warn",
+
+    // Disallow initializing variables to undefined
+    "no-undef-init": "warn",
+
+    // Disallow ternary operators when simpler alternatives exist
+    "no-unneeded-ternary": "warn",
+
+    // Disallow unused expressions
+    "no-unused-expressions": "warn",
+
+    // Disallow unnecessary computed property keys in objects and classes
+    "no-useless-computed-key": "warn",
+
+    // Disallow redundant return statements
+    "no-useless-return": "warn",
+
+    // Require let or const instead of var
+    "no-var": "warn",
+
+    // Require or disallow method and property shorthand syntax for object literals
+    "object-shorthand": "warn",
+
+    // Require using arrow functions for callbacks
+    "prefer-arrow-callback": "warn",
+
+    // Require const declarations for variables that are never reassigned after declared
+    "prefer-const": ["warn", { "destructuring": "all" }],
+
+    // Require rest parameters instead of arguments
+    "prefer-rest-params": "warn",
+
+    // Enforce the consistent use of the radix argument when using parseInt()
+    "radix": "error",
+
+    // Disallow async functions which have no await expression
+    "require-await": "off",
+
+    /*
+      ╔╦╗╦ ╦╔═╗╔═╗╔═╗╔═╗╦═╗╦╔═╗╔╦╗
+       ║ ╚╦╝╠═╝║╣ ╚═╗║  ╠╦╝║╠═╝ ║ 
+       ╩  ╩ ╩  ╚═╝╚═╝╚═╝╩╚═╩╩   ╩ 
+    */
+
+    // Disallow @ts-<directive> comments or require descriptions after directives
+    "@typescript-eslint/ban-ts-comment": "off",
+
+    // Disallow the declaration of empty interfaces
+    "@typescript-eslint/no-empty-interface": "off",
+
+    // Disallow the any type
+    "@typescript-eslint/no-explicit-any": "off",
+
+    // Disallow Promises in places not designed to handle them
+    "@typescript-eslint/no-misused-promises": "off",
+
+    // Disallow non-null assertions after an optional chain expression
+    "@typescript-eslint/no-non-null-asserted-optional-chain": "off",
+
+    // Disallow non-null assertions using the ! postfix operator
+    "@typescript-eslint/no-non-null-assertion": "off",
+
+    // Disallow type assertions that do not change the type of an expression
+    "@typescript-eslint/no-unnecessary-type-assertion": ["warn", { "typesToIgnore": ["AulaID"] }],
+
+    // Disallow calling a function with a value with type any
+    "@typescript-eslint/no-unsafe-argument": "off",
+
+    // Disallow assigning a value with type any to variables and properties
+    "@typescript-eslint/no-unsafe-assignment": "off",
+
+    // Disallow calling a value with type any
+    "@typescript-eslint/no-unsafe-call": "off",
+
+    // Disallow member access on a value with type any
+    "@typescript-eslint/no-unsafe-member-access": "off",
+
+    // Disallow returning a value with type any from a function
+    "@typescript-eslint/no-unsafe-return": "off",
+
+    // Disallow unused variables
+    "@typescript-eslint/no-unused-vars": "off",
+
+    // Disallow async functions which have no await expression
+    "@typescript-eslint/require-await": "off",
+
+    // Enforce template literal expressions to be of string type
+    "@typescript-eslint/restrict-template-expressions": "off"
+
+    /*
+      ╔═╗╔═╗╔╦╗╦╔═╗╔╗╔╔═╗╦  
+      ║ ║╠═╝ ║ ║║ ║║║║╠═╣║  
+      ╚═╝╩   ╩ ╩╚═╝╝╚╝╩ ╩╩═╝
+    */
+
+    // "@typescript-eslint/no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }]
+    // "@typescript-eslint/consistent-type-imports": ["warn", { "prefer": "type-imports" }],
+    // "arrow-body-style": "warn",
+    // "prefer-template": "warn",
+  }
+}
