@@ -22,11 +22,11 @@ export class ImagesService extends TypeOrmCrudService<Image> implements OnModule
   async uploadFile(file: Express.Multer.File) {
     if (!file) throw new UnprocessableEntityException('File is required')
 
-    const fileName = `${uuidv4()}.webp`
+    const fileName = `${uuidv4()}.avif`
     try {
       await sharp(file.buffer)
         .resize({ height: IMAGE_HEIGHT, withoutEnlargement: true })
-        .webp()
+        .avif()
         .toFile(`files/${fileName}`)
 
       const image = new Image()

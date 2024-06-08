@@ -10,7 +10,7 @@ export class UsersService extends TypeOrmCrudService<User> {
     super(repository)
   }
 
-  async findOneByEmail(email: string) {
+  async findOneByEmail(email: User['email']) {
     const result = await this.findOneBy({ email })
     return result
   }

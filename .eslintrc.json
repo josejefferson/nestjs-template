@@ -3,7 +3,7 @@
   "parser": "@typescript-eslint/parser",
   "parserOptions": { "project": true },
   "plugins": ["@typescript-eslint"],
-  "ignorePatterns": ["dist", "public", "temp", "*.js"],
+  "ignorePatterns": ["dist", "public", "temp", "*.js", "src/migrations"],
   "settings": { "react": { "version": "detect" } },
   "rules": {
     /*
@@ -141,6 +141,9 @@
     // Disallow unused variables
     "@typescript-eslint/no-unused-vars": "off",
 
+    // Disallow unnecessary template literals
+    "@typescript-eslint/no-useless-template-literals": "warn",
+
     // Disallow async functions which have no await expression
     "@typescript-eslint/require-await": "off",
 
@@ -153,9 +156,10 @@
       ╚═╝╩   ╩ ╩╚═╝╝╚╝╩ ╩╩═╝
     */
 
-    // "@typescript-eslint/no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }]
-    // "@typescript-eslint/consistent-type-imports": ["warn", { "prefer": "type-imports" }],
+    // "@typescript-eslint/no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
     // "arrow-body-style": "warn",
+    // "quotes": ["error", "single", { "avoidEscape": true }]
     // "prefer-template": "warn",
+    // "@typescript-eslint/consistent-type-imports": ["warn", { "prefer": "type-imports" }],
   }
 }
